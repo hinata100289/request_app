@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+</head>
+
+<body>
+  {% block content %}
+  <h1>Hello Django</h1>
+
+ <form action="{% url "request:detail" %}" method="GET">
+
+    <select name="location" id="">
+      <option value="240010">mie</option>
+      <option value="270000">osaka</option>
+      <option value="250010">siga</option>
+      <option value="260010">kyouto</option>
+      <option value="280010">hyougo</option>
+      <option value="290010">nara</option>
+      <option value="300010">wakayama</option>
+    </select>
+    <a href='{% url "request:detail" %}'>   <button type="submit">send</button></a>
+  </form>
+
+  {% endblock %}
+
+ 
+</body>
+
+</html>
+
